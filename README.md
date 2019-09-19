@@ -1,5 +1,5 @@
 # Description 
-Processor client that reads from a GRPC stream and prints out the followin stats:
+Processor client that reads from a GRPC stream and prints out the following stats:
 - Rolling average x and y velocities every 10 tracks 
 - Rolling average latitude and longitude every 10 tracks
 - Number of unique trackIds (printed every 10 tracks)
@@ -30,14 +30,15 @@ __________________________________________________________
 
 # Building Processor
 Execute the following command in the root directory of the project
-go build
+
+`go build`
 
 # Runing the Processor
 ./Processor 
 
 Note: Processor takes 2 optional command line args --lat --long that allow the user to bound/filter what tracks are processed. If not specified, there is no bounds
 
-`--lat`: determines the latitude range for a track be processed. If the lattitude of a track does not fall in the range it will not be processed 
+`--lat`: determines the latitude range for a track to be processed. If the lattitude of a track does not fall in the range it will not be processed 
 
 Example: ./Processor --lat=100,-100
 
